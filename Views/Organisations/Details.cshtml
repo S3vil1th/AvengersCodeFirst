@@ -1,0 +1,50 @@
+﻿@model Test13.Models.Organisation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Organisation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Utilisateur.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Denomination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Denomination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_de_creation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_de_creation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_de_dissolution)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_de_dissolution)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OrganisationID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,66 @@
+﻿@model Test13.Models.Incident
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Incident</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Incident_Motif.Motif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Incident_Motif.Motif)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pays.Pays_nom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pays.Pays_nom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Utilisateur.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contexte)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contexte)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Incident)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Incident)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IncidentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

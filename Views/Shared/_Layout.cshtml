@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mon application ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                @Html.ActionLink("AVENGERS ALERT SYSTEM", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Pays", "Index", "Pays")</li>
+                    <li>@Html.ActionLink("Utilisateurs", "Index", "Utilisateurs")</li>
+                    <li>@Html.ActionLink("Civils", "Index", "Civils")</li>
+                    <li>@Html.ActionLink("Heros", "Index", "Heros")</li>
+                    <li>@Html.ActionLink("Mechants", "Index", "Mechants")</li>
+                    <li>@Html.ActionLink("Organisations", "Index", "Organisations")</li>
+                    <li>@Html.ActionLink("Incident_Motif", "Index", "Incident_Motif")</li>
+                    <li>@Html.ActionLink("Incidents", "Index", "Incidents")</li>
+                    <li>@Html.ActionLink("Missions", "Index", "Missions")</li>
+                    <li>@Html.ActionLink("Satisfactions", "Index", "Satisfactions")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - AVENGERS ALERT SYSTEM</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
